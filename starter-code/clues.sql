@@ -19,7 +19,14 @@ WHERE countrycode = 'VAT';
 -- Clue #3: We have new news on the classes Carmen attended – our gumshoes tell us she's moved on
 -- to a different country, a country where people speak only the language she was learning. Find out which
 --  nearby country speaks nothing but that language.
-
+SELECT c.region, c.name, c.code
+FROM countrylanguage cl, country c
+WHERE language = 'Italian'
+    AND cl.countrycode = c.code
+    AND c.region = 'Southern Europe'
+    AND 1 = (SELECT COUNT(language)
+    FROM countrylanguage
+    WHERE countrycode = c.code);
 
 
 -- Clue #4: We're booking the first flight out – maybe we've actually got a chance to catch her this time.
