@@ -68,7 +68,9 @@ WHERE name ='Brazil';
 
 -- Clue #8: Lucky for us, she's getting cocky. She left us a note, and I'm sure she thinks she's very clever, but
 -- if we can crack it, we can finally put her where she belongs – behind bars.
-
+SELECT *
+FROM city
+WHERE population =91084;
 -- Our play date of late has been unusually fun –
 -- As an agent, I'll say, you've been a joy to outrun.
 -- And while the food here is great, and the people – so nice!
@@ -81,4 +83,8 @@ WHERE name ='Brazil';
 
 
 
--- She's in ______________________!
+-- She's in Santa Monica!
+
+-- ALSO:
+-- all answers could have been made one liners using commas like
+-- but having them expanded helps readability
